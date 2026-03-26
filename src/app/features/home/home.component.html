@@ -1,0 +1,12 @@
+@if (isLoading()) {
+  <p>Lädt...</p>
+} @else {
+  @for (survey of surveys(); track survey.id) {
+    <div>
+      <h2>{{ survey.name }}</h2>
+      <p>{{ survey.status }}</p>
+    </div>
+  } @empty {
+    <p>No surveys available</p>
+  }
+}
