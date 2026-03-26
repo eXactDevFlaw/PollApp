@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Mulish:wght@400;600;700;800&display=swap');
+
+:root {
+  --color-bg: #35273a;
+  --color-bg-card: #FAF5FE;
+  --color-surface: #d9d9d914;
+  --color-primary: #ffb770;
+  --color-secondary: #ffcfa1;
+  --color-text: #ffffff;
+  --color-dark: #1a1a2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Mulish', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Nerko One', cursive;
+}
