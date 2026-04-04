@@ -1,1 +1,7 @@
-<p>survey-list works!</p>
+<div class="survey-list">
+  @for (survey of surveys(); track survey.id) {
+    <app-survey-card [survey]="survey" />
+  } @empty {
+    <p>No surveys yet.</p>
+  }
+</div>

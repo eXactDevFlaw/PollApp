@@ -16,7 +16,7 @@
     max-width: 500px;
 
     h1 {
-      font-size: 48px;
+      font-size: 100px;
       color: var(--color-primary);
       line-height: 1.2;
       margin-bottom: 16px;
@@ -60,6 +60,7 @@
     font-size: 32px;
     color: var(--color-primary);
     margin-bottom: 24px;
+    text-align: left;
   }
 }
 
@@ -73,7 +74,7 @@
 
   &__category {
     font-size: 12px;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 8px;

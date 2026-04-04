@@ -1,12 +1,10 @@
 <main class="home">
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero__content">
-      <h1>Collect Feedback,<br />Unlock Ideas</h1>
-      <p>
-        Create and share surveys in minutes - from team events to workplace culture. Collect
-        opinions, engage your audience, and turn feedback into action.
-      </p>
+      <h1>Collect Feedback,<br>Unlock Ideas</h1>
+      <p>Create and share surveys in minutes - from team events to
+      workplace culture. Collect opinions, engage your audience,
+      and turn feedback into action.</p>
       <button class="btn-primary">New survey</button>
     </div>
     <div class="hero__image">
@@ -14,38 +12,13 @@
     </div>
   </section>
 
-  <!-- Surveys Section -->
   <section class="surveys">
     <h2>Your surveys</h2>
-
-    <!-- Ending soon -->
-    <div class="ending-soon">
-      <h3>Ending soon surveys</h3>
-      <div class="ending-soon__grid">
-        @for (survey of endingSoon(); track survey.id) {
-          <div class="ending-soon__card">
-            <span class="ending-soon__category">{{ survey.category }}</span>
-            <h4>{{ survey.name }}</h4>
-            <span class="ending-soon__badge"
-              >Ends in {{ getDaysLeft(survey.end_date) }} day(s)</span
-            >
-          </div>
-        }
-      </div>
-    </div>
-
     @if (isLoading()) {
       <p>Loading...</p>
     } @else {
-      @for (survey of surveys(); track survey.id) {
-        <div class="survey-card">
-          <span class="survey-card__category">{{ survey.category }}</span>
-          <h3>{{ survey.name }}</h3>
-          <span class="survey-card__status">{{ survey.status }}</span>
-        </div>
-      } @empty {
-        <p>No surveys yet.</p>
-      }
+      <app-ending-soon-section [surveys]="endingSoon()" />
+      <app-survey-list [surveys]="surveys()" />
     }
   </section>
 </main>

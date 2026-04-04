@@ -1,1 +1,12 @@
-<p>ending-soon-section works!</p>
+<div class="ending-soon">
+  <h3>Ending soon surveys</h3>
+  <div class="ending-soon__grid">
+    @for (survey of surveys(); track survey.id) {
+      <div class="ending-soon__card">
+        <span class="ending-soon__category">{{ survey.category }}</span>
+        <h4>{{ survey.name }}</h4>
+        <span class="ending-soon__badge">{{ getDaysLabel(survey.end_date) }}</span>
+      </div>
+    }
+  </div>
+</div>
