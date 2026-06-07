@@ -3,6 +3,8 @@
 
 A modern polling application — currently in active development.
 
+![Preview](docs/preview.png)
+
 ## Live Demo
 
 [poll-app.lutz-boelling.de](https://poll-app.lutz-boelling.de)
